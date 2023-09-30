@@ -1,0 +1,94 @@
+@import "./var.scss"; 
+
+.navbar{
+    >#ham{
+        transform: rotate(90deg);
+        font-size: 1.3rem;
+        font-weight: 600;
+        display: none;
+    }
+    z-index: 20;
+    position: relative;
+    top: 0;
+    background-color: transparent;
+    padding: $main-padding;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    color: white;
+
+    > #logo{
+        margin-top: 1.2rem;
+        width: 130px;
+        height: 90px;
+        filter: invert(1);
+        background: url("../assets/nikelogo.png") no-repeat center/cover;
+        position: relative;
+    }
+
+    > main {
+
+        // background-color: rgb(154, 46, 190);
+
+        a {
+            text-decoration: none;
+            color: white;
+            margin: 0 1rem;
+            font-weight: 600;
+        } 
+    }
+
+    >#buttons{
+        >.icons{
+            font-size: 1.1rem;
+            font-weight: 900;
+            margin: 0 .8rem;
+            cursor: pointer;
+        }
+
+        >#contactUs{
+            cursor: pointer;
+            font-size: .8rem;
+            font-weight: 800;
+            padding: .3rem .8rem;
+            margin-left: 1rem;
+            border: 1px solid black;
+            border-radius: 3rem;
+            background-image: linear-gradient(to right,  rgb(100, 147, 254), rgb(252, 155, 169), rgb(238, 144, 37));
+
+            &:hover{
+                border: 1px solid white;
+                color: white;
+            }
+        }
+
+    }
+}
+
+@media  screen and (max-width:1024px) {
+    .navbar {
+        >#ham{
+            display: block;
+        }
+
+        >main,>#buttons{
+            display: none;
+        }
+
+    }
+
+}
+
+
+@media  screen and (max-width: 740px) {
+    .navbar{
+        padding: 0.4rem 3.5rem;
+    }
+}
+
+@media  screen and (max-width: 580px) {
+    .navbar{
+        padding: 0.4rem 1.5rem;
+    }
+}

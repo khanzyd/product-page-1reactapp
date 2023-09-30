@@ -1,0 +1,295 @@
+@import "./var.scss"; 
+
+.home-container{
+    position: absolute;
+    top: 5;
+    left: 0;
+
+    overflow: hidden;
+    background-image: url("../assets/img2.jpeg") ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 600%;
+    -webkit-filter: blur(6rem);
+    -moz-filter: blur(6rem);
+    -o-filter: blur(6rem);
+    -ms-filter: blur(6rem);
+    filter: blur(6rem);
+    height: 100vh;
+    width: 100%;
+    margin-top: -90px;
+    // padding: $main-padding;
+    // min-height: calc(100vh - 90px);
+    // background-color: #dadada;
+
+}
+
+
+.home-main-content{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 90px);
+
+    >#left-content{
+        width: 50%;
+        height: 100%;
+        // background-color: rgba(211, 211, 211, 0.527);
+        padding: 3rem 5rem;
+
+        >h2{
+            font-size: 4.5vw;
+            font-weight: 700;
+            color: #d4d4d4;
+            line-height: 5vw;
+            text-transform: capitalize;
+            margin-top: 3rem;
+            letter-spacing: 3px;
+
+            >span{
+                font-size: 6vw;
+                font-weight: 900;
+                background: -webkit-linear-gradient(rgb(21, 140, 134), rgb(114, 237, 230), #5c026c);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+        }
+
+        >p{
+            margin-top: 4rem;
+            font-size: 1vw;
+            font-weight: 500;
+            line-height: 1.1vw;
+            color: white;
+            width: 90%;
+            letter-spacing: 2px;
+        }
+
+        >button{
+            font-size: 1vw;
+            font-weight: 800;
+            padding: 0.8rem 2.5rem;
+            margin-top: 4rem;
+            border-radius: 2rem;
+            background-color: rgb(21, 190, 182);
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    >#right-content{
+        position: relative;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 3rem;
+
+
+        // background-color: rgba(141, 226, 234, 0.465);
+
+        >#nike{
+            user-select: none;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            
+            transform: translate(-50%,-50%);
+            font-size: 15vw;
+            letter-spacing: 2vw;
+            font-weight: 800;
+            -webkit-text-stroke: 2px rgb(201, 201, 201) ;
+            -webkit-text-fill-color: transparent;
+            
+        }
+
+        >#mainshoe{
+            position: absolute;
+            transform: translate(-50%,50%);
+            bottom: 50%;
+            left: 45%;
+            animation: 2s ease-out 1s infinite alternate wave ;
+            filter: drop-shadow(0 3rem 1.5rem #0000009b);
+
+            rotate: -10deg;
+            width: 30vw;
+            height: 50%;
+            object-fit: contain;
+            // -webkit-transform: scaleX(-1);
+            // transform: scaleX(-1);
+        }
+
+
+        >#nikelogo{
+            user-select: none;
+            position: absolute;
+            top: 5%;
+            left: 10%;
+
+            filter: invert(.7);
+            width: 30%;
+
+
+        }
+
+        #shoe-drawer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1rem;
+
+            >i{
+                margin: 0 0.5rem;
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: #dadada;
+                cursor: pointer;
+            }
+
+            #drawer-shoes{
+                display: flex;
+                
+
+                .shoe-box{
+                    display: relative;
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 1rem;
+                    padding: 0.4rem;
+                    background-color: #dadada83;
+                    border-radius: 50%;
+                    cursor: pointer;
+
+
+                    >img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
+                        object-position: center;
+                        user-select: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width:1540px) {
+    .home-main-content #right-content #mainshoe{
+        bottom: 60%;
+    }
+}
+
+@media  screen and (max-width:1024px) {
+    .home-main-content{
+        flex-direction: column-reverse;
+        height: fit-content;
+
+        >#right-content{
+            width: 100%;
+            height: 60vh;
+            padding-bottom: 1rem;
+
+            >#nike{
+                top: 30%;
+                font-size: 10rem;
+            }
+
+            >#mainshoe{
+                width: 20rem;
+                height: 60%;
+            }
+
+            >#nikelogo{
+                display: none;
+            }
+
+            #shoe-drawer{
+                margin-bottom: 0;
+            }
+        }
+
+        >#left-content{
+            width: 100%;
+
+            >h2{
+                margin-top: 0;
+                width: 100%;
+            }
+
+            button{
+                margin: 3rem auto;
+                font-size: 1rem;
+            }
+
+            p{
+                font-size: 1rem;
+                line-height: 1rem;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 800px) {
+    .home-main-content{
+    
+        >#right-content {
+
+            >#mainshoe{
+                width: 16rem;
+                height: 60%;
+            }
+        }
+    }
+
+}
+
+
+@media  screen and (max-width: 740px) {
+    .home-main-content {
+
+        >#right-content {
+            >#nike{
+                font-size: 7rem;
+            }
+        }
+
+        >#left-content{
+            padding: 2rem 3rem;
+            >p{
+                font-size: 0.8rem;
+            }
+
+            button{
+                font-size: 0.7rem;
+            }
+        }
+
+    }
+
+}
+
+@media  screen and (max-width: 440px) {
+    .home-main-content {
+
+        >#left-content{
+            padding: 1rem 2rem;
+            >p{
+                margin-top: 2rem;
+            }
+        }
+
+    }
+}
+
+@keyframes wave {
+    to{
+        bottom: 45%;
+    }
+    
+}
